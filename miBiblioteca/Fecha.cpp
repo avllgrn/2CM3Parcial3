@@ -62,7 +62,7 @@ void Fecha::verificaTuEstado(void){
     if(this->anio <= 0)
         this->anio = 2024;
 
-    if(this->mes <= 0 || this->dia > 12)
+    if(this->mes <= 0 || this->mes > 12)
         this->mes = 1;
 
     if(this->dia <= 0 || this->dia > 31)

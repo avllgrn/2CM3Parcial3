@@ -43,6 +43,9 @@ public:
     void modificaTuAtributoHora(int hora);
     void modificaTuAtributoMinuto(int minuto);
     void modificaTuAtributoSegundo(int segundo);
+    void modificaTuEstado(string Nombre,string Paterno,string Materno,string Genero,float estatura,Evento FechaNacimiento);
+    void modificaTuEstado(string Nombre,string Paterno,string Materno,string Genero,float estatura,Fecha F,Hora H);
+    void modificaTuEstado(string Nombre,string Paterno,string Materno,string Genero,float estatura,int dia,int mes,int anio,int hora,int minuto,int segundo);
 };
 
 #endif // PERSONA_H

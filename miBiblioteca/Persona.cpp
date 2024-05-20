@@ -141,3 +141,27 @@ void Persona::modificaTuAtributoSegundo(int segundo){
     HTemporal.modificaTuAtributoSegundo(segundo);
     this->FechaNacimiento.modificaTuAtributoH(HTemporal);
 }
+void Persona::modificaTuEstado(string Nombre,string Paterno,string Materno,string Genero,float estatura,Evento FechaNacimiento){
+    this->Nombre = Nombre;
+    this->Paterno = Paterno;
+    this->Materno = Materno;
+    this->Genero = Genero;
+    this->FechaNacimiento = FechaNacimiento;
+    this->verificaTuEstado();
+}
+void Persona::modificaTuEstado(string Nombre,string Paterno,string Materno,string Genero,float estatura,Fecha F,Hora H){
+    this->Nombre = Nombre;
+    this->Paterno = Paterno;
+    this->Materno = Materno;
+    this->Genero = Genero;
+    this->FechaNacimiento.modificaTuEstado(F,H);
+    this->verificaTuEstado();
+}
+void Persona::modificaTuEstado(string Nombre,string Paterno,string Materno,string Genero,float estatura,int dia,int mes,int anio,int hora,int minuto,int segundo){
+    this->Nombre = Nombre;
+    this->Paterno = Paterno;
+    this->Materno = Materno;
+    this->Genero = Genero;
+    this->FechaNacimiento.modificaTuEstado(dia,mes,anio,hora,minuto,segundo);
+    this->verificaTuEstado();
+}
