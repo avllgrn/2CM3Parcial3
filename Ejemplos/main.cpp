@@ -1,6 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
-#include "Empleado.h"
+#include "Alumno.h"
 using namespace std;
 
 int main(void){
@@ -8,10 +8,10 @@ int main(void){
     Hora H(12,34,56);
     Evento E(13,8,2001,7,8,9);
     //Pruebas de constructores y muestraTuEstado()
-    Empleado E1;
-    Empleado E2("Juan","Perez","Lopez","m",1.82,E,2,4967.6,"Intendente");
-    Empleado E3("Mario","Elmada","Juarez","masc.",1.76,F,H,3,5678.9,"General");
-    Empleado E4("Laura","Zuniga","Ruiz","Fem.",1.86,29,4,2004,8,54,32,4,49876.54,"Gerente");
+    Alumno E1;
+    Alumno E2("Juan","Perez","Lopez","m",1.82,E,2,7.6,"ICE");
+    Alumno E3("Mario","Elmada","Juarez","masc.",1.76,F,H,3,8.9,"IE");
+    Alumno E4("Laura","Zuniga","Ruiz","Fem.",1.86,29,4,2004,8,54,32,4,6.54,"ICA");
 
     cout<<"E1"<<endl;E1.muestraTuEstado();cout<<endl<<endl;
     cout<<"E2"<<endl;E2.muestraTuEstado();cout<<endl<<endl;
@@ -29,14 +29,14 @@ int main(void){
     system("pause");
     system("cls");
 
-    //Pruebas de dameTuAtributoNumeroEmpleado(),dameTuAtributoSueldo(),dameTuAtributoPuesto()
-    //modificaTuAtributoNumeroEmpleado(),modificaTuAtributoSueldo() y modificaTuAtributoPuesto()
+    //Pruebas de dameTuAtributoSemestre(),dameTuAtributoPromedio(),dameTuAtributoCarrera()
+    //modificaTuAtributoSemestre(),modificaTuAtributoPromedio() y modificaTuAtributoCarrera()
     cout<<"E1"<<endl;E1.muestraTuEstado();cout<<endl<<endl;
     cout<<"E2"<<endl;E2.muestraTuEstado();cout<<endl<<endl;
 
-    E2.modificaTuAtributoNumeroEmpleado(E1.dameTuAtributoNumeroEmpleado());
-    E2.modificaTuAtributoSueldo(E1.dameTuAtributoSueldo());
-    E2.modificaTuAtributoPuesto(E1.dameTuAtributoPuesto());
+    E2.modificaTuAtributoSemestre(E1.dameTuAtributoSemestre());
+    E2.modificaTuAtributoPromedio(E1.dameTuAtributoPromedio());
+    E2.modificaTuAtributoCarrera(E1.dameTuAtributoCarrera());
 
     cout<<endl<<"E2"<<endl;E1.muestraTuEstado();cout<<endl<<endl;
 
