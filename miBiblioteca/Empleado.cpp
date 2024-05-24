@@ -37,7 +37,7 @@ Empleado::Empleado(string Nombre,string Paterno,string Materno,string Genero,flo
 void Empleado::pideleAlUsuarioTuEstado(void){
     string Enter;
     Persona::pideleAlUsuarioTuEstado();
-    cout<<"Dame mi numeroEmpleado ";
+    cout<<"Dame mi numero de empleado ";
     cin>>this->numeroEmpleado;
     cout<<"Dame mi sueldo ";
     cin>>this->sueldo;
@@ -48,9 +48,9 @@ void Empleado::pideleAlUsuarioTuEstado(void){
 }
 void Empleado::muestraTuEstado(void){
     Persona::muestraTuEstado();
-    cout<<"Numero: "<<this->numeroEmpleado<<endl
+    cout<<"Numero de Empleado: "<<this->numeroEmpleado<<endl
         <<"Sueldo: "<<this->sueldo<<endl
-        <<"Puesto: "<<this->Puesto;
+        <<"Puesto: "<<this->Puesto<<endl;
 }
 int Empleado::dameTuAtributoNumeroEmpleado(void){
     return this->numeroEmpleado;

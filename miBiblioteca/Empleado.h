@@ -1,7 +1,11 @@
 #ifndef EMPLEADO_H
 #define EMPLEADO_H
 
+#include <iostream>
+#include <stdlib.h>
 #include "Persona.h"
+using namespace std;
+
 class Empleado : public Persona{
 private:
     int numeroEmpleado;
