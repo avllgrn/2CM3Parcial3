@@ -15,9 +15,9 @@ int main(void){
     float ptrFloat;//Variable float
     char ptrChar;//Variable char
 
-    ptrInt = x;//Guardar el dato en variable x en variable ptrInt
-    ptrFloat = y;//Guardar el dato en variable y en variable ptrFloat
-    ptrChar = z;//Guardar el dato en variable z en variable ptrChar
+    ptrInt = &x;//Guardar la direccion de variable x en variable ptrInt
+    ptrFloat = &y;//Guardar la direccion de variable y en variable ptrFloat
+    ptrChar = &z;//Guardar la direccion de variable z en variable ptrChar
 
     cout<<"x\t  = "<<x<<endl//Contenido en x
         <<"&x\t  = "<<&x<<endl//Direccion de x
