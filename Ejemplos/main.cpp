@@ -1,44 +1,36 @@
 #include <iostream>
-#include <stdlib.h>
-#include "Profesor.h"
+#include <stdio.h>
 using namespace std;
 
 int main(void){
-    Fecha F(12,6,1999);
-    Hora H(12,34,56);
-    Evento E(13,8,2001,7,8,9);
-    //Pruebas de constructores y muestraTuEstado()
-    Profesor E1;
-    Profesor E2("Juan","Perez","Lopez","m",1.82,E,2,12345.56,"Docente",1,4.5,"Matematicas");
-    Profesor E3("Mario","Elmada","Juarez","masc.",1.76,F,H,3,1357.79,"Maestro",2,9.0,"Fisica");
-    Profesor E4("Laura","Zuniga","Ruiz","Fem.",1.86,29,4,2004,8,54,32,4,15432.21,"Profesora",4,24,"Circuitos");
+    int x;//Variable int
+    float y;//Variable float
+    char z;//Variable char
 
-    cout<<"E1"<<endl;E1.muestraTuEstado();cout<<endl<<endl;
-    cout<<"E2"<<endl;E2.muestraTuEstado();cout<<endl<<endl;
-    cout<<"E3"<<endl;E3.muestraTuEstado();cout<<endl<<endl;
-    cout<<"E4"<<endl;E4.muestraTuEstado();cout<<endl<<endl;
-    system("pause");
-    system("cls");
+    x=5;
+    y=6.7;
+    z='@';
 
-    //Prueba de pideleElUsuarioTuEstado()
-    cout<<"E1"<<endl;E1.muestraTuEstado();cout<<endl<<endl;
+    int ptrInt;//Variable int
+    float ptrFloat;//Variable float
+    char ptrChar;//Variable char
 
-    cout<<"E1"<<endl;E1.pideleAlUsuarioTuEstado();
+    ptrInt = x;//Guardar el dato en variable x en variable ptrInt
+    ptrFloat = y;//Guardar el dato en variable y en variable ptrFloat
+    ptrChar = z;//Guardar el dato en variable z en variable ptrChar
 
-    cout<<endl<<"E1"<<endl;E1.muestraTuEstado();cout<<endl<<endl;
-    system("pause");
-    system("cls");
-
-    //Pruebas de dameTuAtributoSemestre(),dameTuAtributoPromedio(),dameTuAtributoCarrera()
-    //modificaTuAtributoSemestre(),modificaTuAtributoPromedio() y modificaTuAtributoCarrera()
-    cout<<"E1"<<endl;E1.muestraTuEstado();cout<<endl<<endl;
-    cout<<"E2"<<endl;E2.muestraTuEstado();cout<<endl<<endl;
-
-    E2.modificaTuAtributoNumeroGrupos(E1.dameTuAtributoNumeroGrupos());
-    E2.modificaTuAtributoCarga(E1.dameTuAtributoCarga());
-    E2.modificaTuAtributoAcademia(E1.dameTuAtributoAcademia());
-
-    cout<<endl<<"E2"<<endl;E1.muestraTuEstado();cout<<endl<<endl;
+    cout<<"x\t  = "<<x<<endl//Contenido en x
+        <<"&x\t  = "<<&x<<endl//Direccion de x
+        <<"ptrInt\t  = "<<ptrInt<<endl//Contenido en ptrInt
+        <<"&ptrInt\t  = "<<&ptrInt<<endl<<endl//Direccion de ptrInt
+        <<"y\t  = "<<y<<endl//Contenido en y
+        <<"&y\t  = "<<&y<<endl//Direccion de y
+        <<"ptrFloat  = "<<ptrFloat<<endl//Contenido en ptrFloat
+        <<"&ptrFloat = "<<&ptrFloat<<endl<<endl//Direccion de ptrFloat
+        <<"z\t  = "<<z<<endl//Contenido en z
+        <<"&z\t  = "<<(void*)&z<<endl//Direccion de z
+        <<"ptrChar\t  = "<<ptrChar<<endl//Contenido en ptrChar
+        <<"&ptrChar  = "<<(void*)&ptrChar<<endl;//Direccion de ptrChar
 
     return 0;
 }
