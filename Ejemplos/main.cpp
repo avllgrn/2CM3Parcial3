@@ -11,9 +11,9 @@ int main(void){
     y=6.7;
     z='@';
 
-    int ptrInt;//Variable int
-    float ptrFloat;//Variable float
-    char ptrChar;//Variable char
+    int* ptrInt;//Variable int
+    float* ptrFloat;//Variable float
+    char* ptrChar;//Variable char
 
     ptrInt = &x;//Guardar la direccion de variable x en variable ptrInt
     ptrFloat = &y;//Guardar la direccion de variable y en variable ptrFloat
@@ -29,7 +29,7 @@ int main(void){
         <<"&ptrFloat = "<<&ptrFloat<<endl<<endl//Direccion de ptrFloat
         <<"z\t  = "<<z<<endl//Contenido en z
         <<"&z\t  = "<<(void*)&z<<endl//Direccion de z
-        <<"ptrChar\t  = "<<ptrChar<<endl//Contenido en ptrChar
+        <<"ptrChar\t  = "<<(void*)ptrChar<<endl//Contenido en ptrChar
         <<"&ptrChar  = "<<(void*)&ptrChar<<endl;//Direccion de ptrChar
 
     return 0;
