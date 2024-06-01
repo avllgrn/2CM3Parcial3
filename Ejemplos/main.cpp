@@ -14,9 +14,9 @@ int main(void){
     Complejo* ptrComplejo;//Apuntador a Complejo
     Fraccion* ptrFraccion;//Apuntador a Fraccion
 
-    ptrPunto2D = &P;//Guardar la direccion de Objeto Punto2D y en Apuntador a ptrPunto2D
-    ptrComplejo = &C;//Guardar la direccion de Objeto Complejo en Apuntador a ptrComplejo
-    ptrFraccion = &F;//Guardar la direccion de Objeto Fraccion en Apuntador a ptrFraccion
+    ptrPunto2D = &C;//Guardar la direccion de Objeto Complejo y en Apuntador a ptrPunto2D
+    ptrComplejo = &F;//Guardar la direccion de Objeto Fraccion en Apuntador a ptrComplejo
+    ptrFraccion = &P;//Guardar la direccion de Objeto Punto2D en Apuntador a ptrFraccion
 
 
     cout<<"P.muestraTuEstado() => ";P.muestraTuEstado();cout<<endl;//Estado de P
