@@ -1,29 +1,64 @@
 #include <iostream>
 #include <stdio.h>
-#include "Punto3D.h"
+#include "Persona.h"
+#include "Empleado.h"
+#include "Profesor.h"
 using namespace std;
 
 int main(void){
-    Punto2D P2D;
-    Punto3D P3D;
-    Punto2D* ptr;
+    Persona P;
+    Empleado E;
+    Profesor M;
+    Persona* ptrP;
+    Empleado* ptrE;
 
-    ptr = &P2D;
-    cout<<"P2D";
-    ptr->muestraTuEstado();         cout<<endl;
-    cout<<endl<<"P2D"<<endl;
-    ptr->pideleAlUsuarioTuEstado(); cout<<endl;
-    cout<<"P2D";
-    ptr->muestraTuEstado();         cout<<endl<<endl;
+    ptrP = &P;
+    cout<<"P con ptrP"<<endl;
+    ptrP->muestraTuEstado();         cout<<endl;
+    cout<<endl<<"P con ptrP"<<endl;
+    ptrP->pideleAlUsuarioTuEstado(); cout<<endl;
+    cout<<"P con ptrP"<<endl;
+    ptrP->muestraTuEstado();         cout<<endl<<endl;
     system("pause");                cout<<endl<<endl;
+    system("cls");
 
-    ptr = &P3D;
-    cout<<"P3D";
-    ptr->muestraTuEstado();         cout<<endl;
-    cout<<endl<<"P3D"<<endl;
-    ptr->pideleAlUsuarioTuEstado(); cout<<endl;
-    cout<<"P3D";
-    ptr->muestraTuEstado();         cout<<endl;
+    ptrP = &E;
+    cout<<"E con ptrP"<<endl;
+    ptrP->muestraTuEstado();         cout<<endl;
+    cout<<endl<<"E con ptrP"<<endl;
+    ptrP->pideleAlUsuarioTuEstado(); cout<<endl;
+    cout<<"E con ptrP"<<endl;
+    ptrP->muestraTuEstado();         cout<<endl;
+    system("pause");                cout<<endl<<endl;
+    system("cls");
+
+    ptrP = &M;
+    cout<<"M con ptrP"<<endl;
+    ptrP->muestraTuEstado();         cout<<endl;
+    cout<<endl<<"M con ptrP"<<endl;
+    ptrP->pideleAlUsuarioTuEstado(); cout<<endl;
+    cout<<"M con ptrP"<<endl;
+    ptrP->muestraTuEstado();         cout<<endl;
+    system("pause");                cout<<endl<<endl;
+    system("cls");
+
+    ptrP = &E;
+    cout<<"E con ptrE"<<endl;
+    ptrP->muestraTuEstado();         cout<<endl;
+    cout<<endl<<"E con ptrE"<<endl;
+    ptrP->pideleAlUsuarioTuEstado(); cout<<endl;
+    cout<<"E con ptrE"<<endl;
+    ptrP->muestraTuEstado();         cout<<endl;
+    system("pause");                cout<<endl<<endl;
+    system("cls");
+
+    ptrP = &M;
+    cout<<"M con ptrE"<<endl;
+    ptrP->muestraTuEstado();         cout<<endl;
+    cout<<endl<<"M con ptrE"<<endl;
+    ptrP->pideleAlUsuarioTuEstado(); cout<<endl;
+    cout<<"M con ptrE"<<endl;
+    ptrP->muestraTuEstado();         cout<<endl;
 
     return 0;
 }
