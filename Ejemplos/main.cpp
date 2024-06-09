@@ -1,27 +1,29 @@
 #include <iostream>
 #include <stdio.h>
-#include "Punto2D.h"
-#include "Complejo.h"
-#include "Fraccion.h"
+#include "Punto3D.h"
 using namespace std;
 
 int main(void){
+    Punto2D P2D;
+    Punto3D P3D;
+    Punto2D* ptr;
 
-    Punto2D* ptrPunto2D;//Apuntador Punto2D
-    Complejo* ptrComplejo;//Apuntador Complejo
-    Fraccion* ptrFraccion;//Apuntador Fraccion
+    ptr = &P2D;
+    cout<<"P2D";
+    ptr->muestraTuEstado();         cout<<endl;
+    cout<<endl<<"P2D"<<endl;
+    ptr->pideleAlUsuarioTuEstado(); cout<<endl;
+    cout<<"P2D";
+    ptr->muestraTuEstado();         cout<<endl<<endl;
+    system("pause");                cout<<endl<<endl;
 
-    ptrPunto2D = new Punto2D();//Instanciar dinamicamente un Objeto Punto2D, sin nombre, y guardar su direccion en Apuntador ptrPunto2D
-    ptrComplejo = new Complejo();//Instanciar dinamicamente un Objeto Complejo, sin nombre, y guardar su direccion en Apuntador ptrComplejo
-    ptrFraccion = new Fraccion();//Instanciar dinamicamente un Objeto Fraccion, sin nombre, y guardar su direccion en Apuntador ptrFraccion
-
-    cout<<"ptrPunto2D->muestraTuEstado() => ";ptrPunto2D->muestraTuEstado();cout<<endl<<endl;//Estado de Objeto Punto2D apuntado por ptrPunto2D
-    cout<<"ptrComplejo->muestraTuEstado() => ";ptrComplejo->muestraTuEstado();cout<<endl<<endl;//Estado de Objeto Complejo apuntado por ptrComplejo
-    cout<<"ptrFraccion->muestraTuEstado() => ";ptrFraccion->muestraTuEstado();cout<<endl<<endl;//Estado de Objeto Fraccion apuntado por ptrFraccion
-
-    delete ptrPunto2D;//Liberar dinamicamente un Objeto Punto2D, sin nombre, cuya direccion esta en Apuntador ptrPunto2D
-    delete ptrComplejo;//Liberar dinamicamente un Objeto Complejo, sin nombre, cuya direccion esta en Apuntador ptrComplejo
-    delete ptrFraccion;//Liberar dinamicamente un Objeto Fraccion, sin nombre, cuya direccion esta en Apuntador ptrFraccion
+    ptr = &P3D;
+    cout<<"P3D";
+    ptr->muestraTuEstado();         cout<<endl;
+    cout<<endl<<"P3D"<<endl;
+    ptr->pideleAlUsuarioTuEstado(); cout<<endl;
+    cout<<"P3D";
+    ptr->muestraTuEstado();         cout<<endl;
 
     return 0;
 }
