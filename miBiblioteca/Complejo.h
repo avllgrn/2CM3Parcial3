@@ -22,6 +22,12 @@ public:
     double dameTuAtributoImaginario(void);
     void modificaTuAtributoImaginario(double imaginario);
 };
+istream& operator >>(istream& Izquierdo, Complejo& Derecho);
+ostream& operator <<(ostream& Izquierdo, Complejo Derecho);
+Complejo operator+(Complejo Izquierdo, Complejo Derecho);
+Complejo operator-(Complejo Izquierdo, Complejo Derecho);
+Complejo operator*(Complejo Izquierdo, Complejo Derecho);
+Complejo operator/(Complejo Izquierdo, Complejo Derecho);
 
 
 Complejo suma(Complejo A, Complejo B);

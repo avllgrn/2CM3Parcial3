@@ -21,7 +21,12 @@ public:
     int dameTuAtributoExponente(void);
     void modificaTuAtributoExponente(int exponente);
 };
-
+istream& operator >>(istream& Izquierdo, Monomio& Derecho);
+ostream& operator <<(ostream& Izquierdo, Monomio Derecho);
+Monomio operator+(Monomio Izquierdo, Monomio Derecho);
+Monomio operator-(Monomio Izquierdo, Monomio Derecho);
+Monomio operator*(Monomio Izquierdo, Monomio Derecho);
+Monomio operator/(Monomio Izquierdo, Monomio Derecho);
 
 Monomio suma(Monomio A, Monomio B);
 Monomio resta(Monomio A, Monomio B);

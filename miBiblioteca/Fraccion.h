@@ -22,7 +22,18 @@ public:
     int dameTuAtributoDenominador(void);
     void modificaTuAtributoDenominador(int denominador);
 };
-
+istream& operator >>(istream& Izquierdo, Fraccion& Derecho);
+ostream& operator <<(ostream& Izquierdo, Fraccion Derecho);
+Fraccion operator+(Fraccion Izquierdo, Fraccion Derecho);
+Fraccion operator-(Fraccion Izquierdo, Fraccion Derecho);
+Fraccion operator*(Fraccion Izquierdo, Fraccion Derecho);
+Fraccion operator/(Fraccion Izquierdo, Fraccion Derecho);
+bool operator<(Fraccion Izquierdo, Fraccion Derecho);
+bool operator<=(Fraccion Izquierdo, Fraccion Derecho);
+bool operator>(Fraccion Izquierdo, Fraccion Derecho);
+bool operator>=(Fraccion Izquierdo, Fraccion Derecho);
+bool operator!=(Fraccion Izquierdo, Fraccion Derecho);
+bool operator==(Fraccion Izquierdo, Fraccion Derecho);
 
 Fraccion suma(Fraccion A, Fraccion B);
 Fraccion resta(Fraccion A, Fraccion B);

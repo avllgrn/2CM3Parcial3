@@ -54,6 +54,70 @@ void Fraccion::verificaTuEstado(void){
 
 //Funciones relacionadas con la clase
 
+istream& operator >>(istream& Izquierdo, Fraccion& Derecho){
+    Derecho.pideleAlUsuarioTuEstado();
+    return Izquierdo;
+}
+ostream& operator <<(ostream& Izquierdo, Fraccion Derecho){
+    Derecho.muestraTuEstado();
+    return Izquierdo;
+}
+Fraccion operator+(Fraccion Izquierdo, Fraccion Derecho){
+    return suma(Izquierdo,Derecho);
+}
+Fraccion operator-(Fraccion Izquierdo, Fraccion Derecho){
+    return resta(Izquierdo,Derecho);
+}
+Fraccion operator*(Fraccion Izquierdo, Fraccion Derecho){
+    return multiplica(Izquierdo,Derecho);
+}
+Fraccion operator/(Fraccion Izquierdo, Fraccion Derecho){
+    return divide(Izquierdo,Derecho);
+}
+bool operator<(Fraccion Izquierdo, Fraccion Derecho){
+    return
+            Izquierdo.dameTuAtributoNumerador()*Derecho.dameTuAtributoDenominador()
+        <
+            Derecho.dameTuAtributoNumerador()*Izquierdo.dameTuAtributoDenominador()
+    ;
+}
+bool operator<=(Fraccion Izquierdo, Fraccion Derecho){
+    return
+            Izquierdo.dameTuAtributoNumerador()*Derecho.dameTuAtributoDenominador()
+        <=
+            Derecho.dameTuAtributoNumerador()*Izquierdo.dameTuAtributoDenominador()
+    ;
+}
+bool operator>(Fraccion Izquierdo, Fraccion Derecho){
+    return
+            Izquierdo.dameTuAtributoNumerador()*Derecho.dameTuAtributoDenominador()
+        >
+            Derecho.dameTuAtributoNumerador()*Izquierdo.dameTuAtributoDenominador()
+    ;
+}
+bool operator>=(Fraccion Izquierdo, Fraccion Derecho){
+    return
+            Izquierdo.dameTuAtributoNumerador()*Derecho.dameTuAtributoDenominador()
+        >=
+            Derecho.dameTuAtributoNumerador()*Izquierdo.dameTuAtributoDenominador()
+    ;
+}
+bool operator!=(Fraccion Izquierdo, Fraccion Derecho){
+    return
+            Izquierdo.dameTuAtributoNumerador()*Derecho.dameTuAtributoDenominador()
+        !=
+            Derecho.dameTuAtributoNumerador()*Izquierdo.dameTuAtributoDenominador()
+    ;
+}
+bool operator==(Fraccion Izquierdo, Fraccion Derecho){
+    return
+            Izquierdo.dameTuAtributoNumerador()*Derecho.dameTuAtributoDenominador()
+        ==
+            Derecho.dameTuAtributoNumerador()*Izquierdo.dameTuAtributoDenominador()
+    ;
+}
+
+
 Fraccion suma(Fraccion A, Fraccion B){
     Fraccion C;
     C.modificaTuAtributoNumerador(

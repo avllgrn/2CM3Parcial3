@@ -45,6 +45,26 @@ void Complejo::modificaTuAtributoImaginario(double imaginario){
 
 //Funciones relacionadas con la clase
 
+istream& operator >>(istream& Izquierdo, Complejo& Derecho){
+    Derecho.pideleAlUsuarioTuEstado();
+    return Izquierdo;
+}
+ostream& operator <<(ostream& Izquierdo, Complejo Derecho){
+    Derecho.muestraTuEstado();
+    return Izquierdo;
+}
+Complejo operator+(Complejo Izquierdo, Complejo Derecho){
+    return suma(Izquierdo,Derecho);
+}
+Complejo operator-(Complejo Izquierdo, Complejo Derecho){
+    return resta(Izquierdo,Derecho);
+}
+Complejo operator*(Complejo Izquierdo, Complejo Derecho){
+    return multiplica(Izquierdo,Derecho);
+}
+Complejo operator/(Complejo Izquierdo, Complejo Derecho){
+    return divide(Izquierdo,Derecho);
+}
 Complejo suma(Complejo A, Complejo B){
     Complejo C;
     C.modificaTuAtributoReal( A.dameTuAtributoReal() + B.dameTuAtributoReal() );

@@ -21,7 +21,12 @@ public:
     void modificaTuAtributoX(double x);
     double dameTuAtributoY(void);
     void modificaTuAtributoY(double y);
+    Punto2D operator+(Punto2D Derecho);
 };
+
+istream& operator >>(istream& Izquierdo, Punto2D& Derecho);
+ostream& operator <<(ostream& Izquierdo, Punto2D Derecho);
+Punto2D operator-(Punto2D Izquierdo, Punto2D Derecho);
 
 Punto2D suma(Punto2D A, Punto2D B);
 Punto2D resta(Punto2D A, Punto2D B);

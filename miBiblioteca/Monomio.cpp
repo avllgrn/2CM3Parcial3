@@ -42,6 +42,26 @@ void Monomio::modificaTuAtributoExponente(int exponente){
 
 
 //Funciones relacionadas con la clase
+istream& operator >>(istream& Izquierdo, Monomio& Derecho){
+    Derecho.pideleAlUsuarioTuEstado();
+    return Izquierdo;
+}
+ostream& operator <<(ostream& Izquierdo, Monomio Derecho){
+    Derecho.muestraTuEstado();
+    return Izquierdo;
+}
+Monomio operator+(Monomio Izquierdo, Monomio Derecho){
+    return suma(Izquierdo,Derecho);
+}
+Monomio operator-(Monomio Izquierdo, Monomio Derecho){
+    return resta(Izquierdo,Derecho);
+}
+Monomio operator*(Monomio Izquierdo, Monomio Derecho){
+    return multiplica(Izquierdo,Derecho);
+}
+Monomio operator/(Monomio Izquierdo, Monomio Derecho){
+    return divide(Izquierdo,Derecho);
+}
 
 Monomio suma(Monomio A, Monomio B){
     Monomio C;

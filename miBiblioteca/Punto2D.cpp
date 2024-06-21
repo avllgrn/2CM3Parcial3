@@ -37,9 +37,36 @@ double Punto2D::dameTuAtributoY(void){
 void Punto2D::modificaTuAtributoY(double y){
     this->y = y;
 }
-
+Punto2D Punto2D::operator+(Punto2D Derecho){
+    Punto2D R;
+    R.modificaTuAtributoX(
+        this->x + Derecho.dameTuAtributoX()
+    );
+    R.modificaTuAtributoY(
+        this->y + Derecho.dameTuAtributoY()
+    );
+    return R;
+}
 
 //Funciones relacionadas con la clase
+istream& operator >>(istream& Izquierdo, Punto2D& Derecho){
+    Derecho.pideleAlUsuarioTuEstado();
+    return Izquierdo;
+}
+ostream& operator <<(ostream& Izquierdo, Punto2D Derecho){
+    Derecho.muestraTuEstado();
+    return Izquierdo;
+}
+Punto2D operator-(Punto2D Izquierdo, Punto2D Derecho){
+    Punto2D R;
+    R.modificaTuAtributoX(
+        Izquierdo.dameTuAtributoX()-Derecho.dameTuAtributoX()
+    );
+    R.modificaTuAtributoY(
+        Izquierdo.dameTuAtributoY()-Derecho.dameTuAtributoY()
+    );
+    return R;
+}
 
 Punto2D suma(Punto2D A, Punto2D B){
     Punto2D C;
