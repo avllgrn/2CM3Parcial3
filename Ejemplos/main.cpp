@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 using namespace std;
 
 class Nodo{
@@ -87,30 +88,47 @@ void Pila::vaciaPila(void){
 }
 
 
-int main(void) {
+int main(void){
     Pila P;
+    int op,d;
 
-    cout<<"\tP.push(5);"<<endl;
-    P.push(5);
-    cout<<"\tP.push(3);"<<endl;
-    P.push(3);
-    cout<<"\tP.push(7);"<<endl;
-    P.push(7);
-    cout<<"\tP.push(-4);"<<endl;
-    P.push(-4);
+    do{
+        system("cls");
+        cout<<"1. push"<<endl
+            <<"2. pop"<<endl
+            <<"3. libera Pila"<<endl
+            <<"4. Salir"<<endl
+            <<"Cual es tu opcion? ";
+        cin>>op;
+        system("cls");
+        switch(op){
+            case 1:
+                cout<<"Ingresa dato ";cin>>d;
+                P.push(d);
+                break;
+            case 2:
+                if(P.estaVacia()){
+                    cout<<"La pila esta vacia... =("<<endl;
+                }
+                else{
+                    d = P.pop();
+                    cout<<"Salio nodo con dato "<<d<<endl<<endl;
+                }
+                break;
+            case 3:
+                P.vaciaPila();
+                break;
+            case 4:
+                cout<<"Adios! =)"<<endl<<endl;
+                break;
+            default :
+                cout<<"Opcion invalida...! =("<<endl<<endl;
+                break;
+        }
+        if(op!=4)
+            system("pause");
 
-    cout<<"\tP.pop();"<<endl;
-    cout<<P.pop()<<endl;
-    cout<<"\tP.pop();"<<endl;
-    cout<<P.pop()<<endl;
-    cout<<"\tP.push(9);"<<endl;
-    P.push(9);
-    cout<<"\tP.pop();"<<endl;
-    cout<<P.pop()<<endl;
-    cout<<"\tP.pop();"<<endl;
-    cout<<P.pop()<<endl;
-    cout<<"\tP.pop();"<<endl;
-    cout<<P.pop()<<endl;
+    }while(op!=4);
 
     return 0;
 }
