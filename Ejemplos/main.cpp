@@ -2,36 +2,42 @@
 #include <stdlib.h>
 using namespace std;
 
+template<typename T>
 class Nodo{
 private:
-    double dato;
-    Nodo* inferior;
+    T dato;
+    Nodo<T>* inferior;
 public:
     Nodo(void);
-    Nodo(double dato, Nodo* inferior);
+    Nodo(T dato, Nodo<T>* inferior);
     ~Nodo(void);
     void pideleAlUsuarioTuEstado(void);
     void muestraTuEstado(void);
-    double dameTuAtributoDato(void);
-    void modificaTuAtributoDato(double dato);
-    Nodo* dameTuAtributoInferior(void);
-    void modificaTuAtributoInferior(Nodo* inferior);
+    T dameTuAtributoDato(void);
+    void modificaTuAtributoDato(T dato);
+    Nodo<T>* dameTuAtributoInferior(void);
+    void modificaTuAtributoInferior(Nodo<T>* inferior);
 };
-Nodo::Nodo(void){
-    this->dato = 0.0;
+template<typename T>
+Nodo<T>::Nodo(void){
+    this->dato = 0;
     this->inferior = NULL;
 }
-Nodo::Nodo(double dato, Nodo* inferior){
+template<typename T>
+Nodo<T>::Nodo(T dato, Nodo<T>* inferior){
     this->dato = dato;
     this->inferior = inferior;
 }
-Nodo::~Nodo(void){
+template<typename T>
+Nodo<T>::~Nodo(void){
 }
-void Nodo::pideleAlUsuarioTuEstado(void){
+template<typename T>
+void Nodo<T>::pideleAlUsuarioTuEstado(void){
     cout << "Dame mi dato ";
     cin >> this->dato;
 }
-void Nodo::muestraTuEstado(void){
+template<typename T>
+void Nodo<T>::muestraTuEstado(void){
     cout << this->dato << " -> ";
     if(this->inferior==NULL)
         cout << "NULL";
@@ -39,58 +45,70 @@ void Nodo::muestraTuEstado(void){
         cout << this->inferior;
     cout<<endl;
 }
-double Nodo::dameTuAtributoDato(void){
+template<typename T>
+T Nodo<T>::dameTuAtributoDato(void){
     return this->dato;
 }
-void Nodo::modificaTuAtributoDato(double dato){
+template<typename T>
+void Nodo<T>::modificaTuAtributoDato(T dato){
     this->dato = dato;
 }
-Nodo* Nodo::dameTuAtributoInferior(void){
+template<typename T>
+Nodo<T>* Nodo<T>::dameTuAtributoInferior(void){
     return this->inferior;
 }
-void Nodo::modificaTuAtributoInferior(Nodo* inferior){
+template<typename T>
+void Nodo<T>::modificaTuAtributoInferior(Nodo<T>* inferior){
     this->inferior = inferior;
 }
 
+template<typename T>
 class Pila{
 private:
-    Nodo* tope;
+    Nodo<T>* tope;
 public:
     Pila(void);
     ~Pila(void);
-    void push(double d);
-    double pop(void);
+    void push(T d);
+    T pop(void);
     bool estaVacia(void);
     void vaciaPila(void);
 };
-Pila::Pila(void){
+template<typename T>
+Pila<T>::Pila(void){
     tope = NULL;
 }
-Pila::~Pila(void){
+template<typename T>
+Pila<T>::~Pila(void){
     vaciaPila();
 }
-void Pila::push(double d){
-    tope = new Nodo(d,tope);
+template<typename T>
+void Pila<T>::push(T d){
+    tope = new Nodo<T>(d,tope);
 }
-double Pila::pop(void){
-    double d = tope->dameTuAtributoDato();
-    Nodo* aux = tope;
+template<typename T>
+T Pila<T>::pop(void){
+    T d = tope->dameTuAtributoDato();
+    Nodo<T>* aux = tope;
     tope = tope->dameTuAtributoInferior();
     delete aux;
     return d;
 }
-bool Pila::estaVacia(void){
+template<typename T>
+bool Pila<T>::estaVacia(void){
     return tope == NULL;
 }
-void Pila::vaciaPila(void){
+template<typename T>
+void Pila<T>::vaciaPila(void){
     while(!estaVacia())
         cout<<pop()<<endl;
 }
 
 
 int main(void){
-    Pila P;
-    int op,d;
+    Pila<string> P;
+    int op;
+    string d;
 
     do{
         system("cls");
